@@ -1,5 +1,6 @@
 ﻿using System;
 
+// Main class of Assignment05
 namespace Assignment5
 {
     class Program
@@ -8,40 +9,54 @@ namespace Assignment5
         {
             Console.WriteLine("Welcome to the Adventure of Assignment 5!");
 
+            // Create a new character
             Character hero = new Character("Bob", RaceCategory.Human, 100);
 
-            Console.WriteLine("{0} has entered the forest", hero.Name );
+            // Display hero enetering forest message
+            Console.WriteLine("{0} has entered the forest", hero.mName );
 
+            // Monster name and damage
             string monster = "goblin";
             int damage = 10;
 
-            Console.WriteLine("A {0} appeared and attacks {1}", monster, hero.Name);
+            // Monster attacks hero message
+            Console.WriteLine("A {0} appeared and attacks {1}", monster, hero.mName);
 
-            Console.WriteLine("{0} takes {1} damage", hero.Name, damage);
+            // Hero takes damage message
+            Console.WriteLine("{0} takes {1} damage", hero.mName, damage);
 
+            // Take damage and write stats
             hero.TakeDamage(damage);
             Console.WriteLine(hero);
 
-            Console.WriteLine("{0} flees from the enemy", hero.Name);
+            // Hero combat fleeing message
+            Console.WriteLine("{0} flees from the enemy", hero.mName);
 
+            // Potion name and healing amount
             string item = "small health potion";
             int restoreAmount = 10;
 
-            Console.WriteLine("{0} find a {1} and drinks it", hero.Name, item);
+            // Hero drinking potion message
+            Console.WriteLine("{0} find a {1} and drinks it", hero.mName, item);
 
-            Console.WriteLine("{0} restores {1} health", hero.Name, restoreAmount);
+            // Hero restoring health message
+            Console.WriteLine("{0} restores {1} health", hero.mName, restoreAmount);
 
+            // Restore hero health
             hero.RestoreHealth(restoreAmount);
 
+            // Write hero stats
             Console.WriteLine(hero);
 
-            if (hero.IsAlive)
+            // If the hero is alive, display survived message
+            if (hero.isAlive)
             {
-                Console.WriteLine("Congratulations! {0} survived.", hero.Name);
+                Console.WriteLine("Congratulations! {0} survived.", hero.mName);
             }
+            // Else display hero dead message
             else
             {
-                Console.WriteLine("{0} has died.", hero.Name);
+                Console.WriteLine("{0} has died.", hero.mName);
             }
         }
     }
