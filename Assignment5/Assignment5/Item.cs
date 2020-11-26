@@ -31,8 +31,8 @@ namespace Assignment5
         // Display the item name, amount and 
         public override string ToString()
         {
-            // TODO: display the output like this Axe
-            return base.ToString();
+            // DONE: display the output like this Axe 
+            return string.Format("{0}({1}): Amount({2})", mName, mGroup, mAmount);
         }
     }
 }
