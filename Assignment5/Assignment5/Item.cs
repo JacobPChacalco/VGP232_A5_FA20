@@ -4,27 +4,31 @@ using System.Text;
 
 namespace Assignment5
 {
-    public enum ItemGroup { Consumable, Key, Equipment };
+    // Item group enum
+    public enum ItemGroup 
+    { 
+        Consumable,
+        Key,
+        Equipment
+    };
+
+    // Item class
     public class Item
     {
-        public string Name { get; set; }
-        public int Amount { get; set; }
+        public string mName { get; set; }
+        public int mAmount { get; set; }
 
-        public ItemGroup Group { get; set; }
+        public ItemGroup mGroup { get; set; }
 
-        /// <summary>
-        /// Constructor.
-        /// </summary>
-        /// <param name="name"></param>
-        /// <param name="amount"></param>
-        /// <param name="group"></param>
+        // Constructor
         public Item(string name, int amount, ItemGroup group)
         {
-            Name = name;
-            Amount = amount;
-            Group = group;
+            mName = name;
+            mAmount = amount;
+            mGroup = group;
         }
 
+        // Display the item name, amount and 
         public override string ToString()
         {
             // TODO: display the output like this Axe
