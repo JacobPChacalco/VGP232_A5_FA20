@@ -86,7 +86,7 @@ namespace Assignment5
             testInventory.Reset();
 
             // Check if the availableSlots go back to 20 when the Inventory is reseted
-            Assert.AreEqual(testInventory.AvailableSlots, finalSlots)
+            Assert.AreEqual(testInventory.AvailableSlots, finalSlots);
         }
 
     }

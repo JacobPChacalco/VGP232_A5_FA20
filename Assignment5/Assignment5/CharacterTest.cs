@@ -46,6 +46,8 @@ namespace Assignment5
         [TestCase(500)]
         public void RestoreHealthRestoreCorrectAmountHealth(int heal)
         {
+            testCharacter.mMaxHealth = 500;
+
             int recoveredHealth = 200;
             testCharacter.RestoreHealth(recoveredHealth);
 
