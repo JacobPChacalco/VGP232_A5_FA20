@@ -71,6 +71,11 @@ namespace Assignment5
             {
                 mHealth += amount;
             }
+
+            if (mHealth > 0)
+            {
+                isAlive = true;
+            }
         }
 
         // Display the character name, race and health in a string format
